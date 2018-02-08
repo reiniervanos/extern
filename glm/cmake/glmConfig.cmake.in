@@ -1,0 +1,10 @@
+@PACKAGE_INIT@
+
+message(STATUS "Found GLM ${GLM_VERSION}")
+
+set_and_check(GLM_INCLUDE_DIR "@PACKAGE_INSTALL_INCLUDE_DIR@")
+set_and_check(GLM_LIBRARY_DIR "@PACKAGE_INSTALL_LIBRARY_DIR@")
+set(GLM_LIBRARIES "glm")
+set(GLM_DEPENDS   "")
+
+check_required_components(glm)

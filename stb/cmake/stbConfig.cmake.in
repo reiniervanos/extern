@@ -1,0 +1,10 @@
+@PACKAGE_INIT@
+
+message(STATUS "Found STB ${STB_VERSION}")
+
+set_and_check(STB_INCLUDE_DIR "@PACKAGE_INSTALL_INCLUDE_DIR@")
+set_and_check(STB_LIBRARY_DIR "@PACKAGE_INSTALL_LIBRARY_DIR@")
+set(STB_LIBRARIES "stb")
+set(STB_DEPENDS   "")
+
+check_required_components(stb)

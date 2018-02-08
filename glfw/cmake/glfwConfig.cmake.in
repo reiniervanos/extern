@@ -1,0 +1,10 @@
+@PACKAGE_INIT@
+
+message(STATUS "Found GLFW ${GLFW_VERSION}")
+
+set_and_check(GLFW_INCLUDE_DIR "@PACKAGE_INSTALL_INCLUDE_DIR@")
+set_and_check(GLFW_LIBRARY_DIR "@PACKAGE_INSTALL_LIBRARY_DIR@")
+set(ZLIB_LIBRARIES "glfw")
+set(ZLIB_DEPENDS   "")
+
+check_required_components(glfw)

@@ -1,0 +1,10 @@
+@PACKAGE_INIT@
+
+message(STATUS "Found GLI ${GLI_VERSION}")
+
+set_and_check(GLI_INCLUDE_DIR "@PACKAGE_INSTALL_INCLUDE_DIR@")
+set_and_check(GLI_LIBRARY_DIR "@PACKAGE_INSTALL_LIBRARY_DIR@")
+set(GLI_LIBRARIES "gli")
+set(GLI_DEPENDS   "")
+
+check_required_components(gli)

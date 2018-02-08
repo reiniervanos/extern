@@ -1,0 +1,10 @@
+@PACKAGE_INIT@
+
+message(STATUS "Found ASSIMP ${ASSIMP_VERSION}")
+
+set_and_check(ASSIMP_INCLUDE_DIR "@PACKAGE_INSTALL_INCLUDE_DIR@")
+set_and_check(ASSIMP_LIBRARY_DIR "@PACKAGE_INSTALL_LIBRARY_DIR@")
+set(ASSIMP_LIBRARIES "assimp")
+set(ASSIMP_DEPENDS   "")
+
+check_required_components(assimp)

@@ -1,0 +1,10 @@
+@PACKAGE_INIT@
+
+message(STATUS "Found GLAD ${GLAD_VERSION}")
+
+set_and_check(GLAD_INCLUDE_DIR "@PACKAGE_INSTALL_INCLUDE_DIR@")
+set_and_check(GLAD_LIBRARY_DIR "@PACKAGE_INSTALL_LIBRARY_DIR@")
+set(GLAD_LIBRARIES "glad")
+set(GLAD_DEPENDS   "")
+
+check_required_components(glad)

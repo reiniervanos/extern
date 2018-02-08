@@ -1,0 +1,10 @@
+@PACKAGE_INIT@
+
+message(STATUS "Found EGL ${EGL_VERSION}")
+
+set_and_check(EGL_INCLUDE_DIR "@PACKAGE_INSTALL_INCLUDE_DIR@")
+set_and_check(EGL_LIBRARY_DIR "@PACKAGE_INSTALL_LIBRARY_DIR@")
+set(EGL_LIBRARIES "EGL")
+set(EGL_DEPENDS   "")
+
+check_required_components(egl)

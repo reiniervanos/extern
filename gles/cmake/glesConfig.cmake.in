@@ -1,0 +1,10 @@
+@PACKAGE_INIT@
+
+message(STATUS "Found GLES ${GLES_VERSION}")
+
+set_and_check(GLES_INCLUDE_DIR "@PACKAGE_INSTALL_INCLUDE_DIR@")
+set_and_check(GLES_LIBRARY_DIR "@PACKAGE_INSTALL_LIBRARY_DIR@")
+set(GLES_LIBRARIES "GLESv2")
+set(GLES_DEPENDS   "")
+
+check_required_components(gles)

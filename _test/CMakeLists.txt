@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.4)
+project(myTest VERSION 0.1 LANGUAGES CXX)
+
+message(STATUS "--------------------------------------")
+
+find_package(GETOPT NAMES getopt REQUIRED)
+find_package(ZLIB NAMES zlib REQUIRED)
+find_package(STB NAMES stb REQUIRED)
+find_package(EGL NAMES egl REQUIRED)
+find_package(GLES NAMES gles REQUIRED)
+find_package(GLAD NAMES glad REQUIRED)
+find_package(GLFW NAMES glfw REQUIRED)
+find_package(GLI NAMES gli REQUIRED)
+find_package(GLM NAMES glm REQUIRED)
+find_package(KTX NAMES ktx REQUIRED)
+find_package(SPIRV NAMES spirv REQUIRED)
+find_package(GLSLANG NAMES glslang REQUIRED)
+find_package(SHADERC NAMES shaderc REQUIRED)
+find_package(ASSIMP NAMES assimp REQUIRED)
+
+message(STATUS "--------------------------------------" REQUIRED)
